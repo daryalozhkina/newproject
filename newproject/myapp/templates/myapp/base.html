@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <div class="menu">
+    <ul>
+        <li>
+            <a href="/">Главная</a>
+        </li>
+        <li>
+            <a href="/students/">Студенты</a>
+        </li>
+        <li>
+            <a href="/groups/">Группы</a>
+        </li>
+    </ul>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
