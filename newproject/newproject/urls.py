@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('', myapp.index),
-    path('students/', myapp.index),
-    path('groups/', myapp.index),
+    path('', myapp.index, name='index'),
+    path('students/', myapp.students, name='students'),
+
+    path('students/category/<int:pk>/', myapp.students, name='students_page'),
+    path('groups/', myapp.groups, name='groups'),
     path('admin/', admin.site.urls),
 ]

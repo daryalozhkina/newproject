@@ -2,11 +2,12 @@
 
 {% block content %}
     <h1>Студенты</h1>
-    <div class="menu">
+    <div class="page">
         <ul>
-            {% for categories in categories %}
+            {% for group in categories %}
                 <li>
-                    <a href="#">{{ categories }}
+                    <a href="{% url 'catalog_page' categories.pk %}">
+                        {{ categories }}
                     </a>
                 </li>
             {% endfor %}
