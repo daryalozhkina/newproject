@@ -1,5 +1,16 @@
 {% extends 'myapp/base.html' %}
 
 {% block content %}
-    <h1>Группы студентов</h1>
+    <h1>Группы</h1>
+    <div class="menu">
+        <ul>
+            {% for specialties in categories %}
+                <li>
+                    <a href="#">{{ specialties }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
 {% endblock %}

@@ -17,7 +17,12 @@ def students(request):
 
 
 def groups(request):
-    return render(request, 'myapp/groups.html')
+    specialties = Category.objects.all()
+    context = {
+        'specialties': specialties,
+        'groups': 'группы'
+    }
+    return render(request, 'myapp/groups.html', context)
 
 
 def students_page(request, pk):
