@@ -4,9 +4,9 @@
     <h1>Студенты</h1>
     <div class="page">
         <ul>
-            {% for group in categories %}
+            {% for categories in categories %}
                 <li>
-                    <a href="{% url 'catalog_page' categories.pk %}">
+                    <a href="{% url 'staffes_page' categories.pk %}">
                         {{ categories }}
                     </a>
                 </li>

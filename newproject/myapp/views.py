@@ -1,34 +1,16 @@
 from django.shortcuts import render
 
-from myapp.models import Category, Groups
+from myapp.models import Category
 
 
 def index(request):
     return render(request, 'myapp/index.html')
 
 
-def students(request):
+def staffes(request):
     categories = Category.objects.all()
     context = {
         'categories': categories,
-        'students': 'студенты'
+        'staffes': 'сотрудники'
     }
-    return render(request, 'myapp/students.html', context)
-
-
-def groups(request):
-    specialties = Category.objects.all()
-    context = {
-        'specialties': specialties,
-        'groups': 'группы'
-    }
-    return render(request, 'myapp/groups.html', context)
-
-
-def students_page(request, pk):
-    group = Groups.objects.filter(category_id=pk)
-    context = {
-        'group': group,
-        'students_page': 'страница студентов'
-    }
-    return render(request, 'myapp/students_page.html', context)
+    return render(request, 'myapp/staffes.html', context)

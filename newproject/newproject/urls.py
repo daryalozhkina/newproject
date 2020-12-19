@@ -17,11 +17,9 @@ import myapp.views as myapp
 from django.contrib import admin
 from django.urls import path
 
-urlpatterns = [
+urlpatterns = {
     path('', myapp.index, name='index'),
-    path('students/', myapp.students, name='students'),
+    path('staffes/', myapp.staffes, name='staffes'),
 
-    path('students/category/<int:pk>/', myapp.students, name='students_page'),
-    path('groups/', myapp.groups, name='groups'),
     path('admin/', admin.site.urls),
-]
+}
